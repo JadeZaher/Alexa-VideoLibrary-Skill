@@ -1,0 +1,153 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Alexa Video Library Skill",
+          "customProductPrompts": {
+            "purchasePromptDescription": "A video skill",
+            "purchaseConfirmationDescription": "A video skill"
+          },
+          "examplePhrases": [
+            "Alexa open video skill",
+            "Alexa open video skill and show me video one",
+            "play video one"
+          ],
+          "keywords": [
+            "E-learning"
+          ],
+          "name": "Video Skill",
+          "description": "Video skill template"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "The whole library is the product. Simply choose the video you would like to watch and ask to play. Ask Alexa to pause, unpause, or go back. Use the screen to find the the video you want or ask Alexa to scroll for you till you seen the video you like.\n\nYou may use the buttons to exit the skill and get an email with some useful Alexa routines that compliment our service. \n\nWe will be adding many more videos and updating the videos we currently have in the near future.",
+      "paidSkillInformation": {
+        "taxInformation": {
+          "category": "VIDEO"
+        },
+        "pricing": {
+          "amazon.com": [
+            {
+              "offerType": "SUBSCRIPTION",
+              "price": 0.99,
+              "subscriptionInformation": {
+                "subscriptionPaymentFrequency": "MONTHLY"
+              },
+              "currency": "USD"
+            }
+          ]
+        }
+      },
+      "category": "HEALTH_AND_FITNESS",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "US"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "no peaking"
+        },
+        "interfaces": [
+          {
+            "supportedViewports": [
+              {
+                "minHeight": 540,
+                "mode": "TV",
+                "shape": "RECTANGLE",
+                "maxHeight": 540,
+                "minWidth": 960,
+                "maxWidth": 960
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 959,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 1279,
+                "minWidth": 1280,
+                "maxWidth": 1920
+              },
+              {
+                "minHeight": 320,
+                "mode": "MOBILE",
+                "shape": "RECTANGLE",
+                "maxHeight": 1920,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 320,
+                "mode": "MOBILE",
+                "shape": "RECTANGLE",
+                "maxHeight": 1920,
+                "minWidth": 1280,
+                "maxWidth": 1920
+              },
+              {
+                "minHeight": 100,
+                "mode": "HUB",
+                "shape": "ROUND",
+                "maxHeight": 599,
+                "minWidth": 100,
+                "maxWidth": 599
+              },
+              {
+                "minHeight": 100,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 599,
+                "minWidth": 960,
+                "maxWidth": 1279
+              }
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "no peaking"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "no peaking"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "no peaking"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": true,
+      "locales": {
+        "en-US": {
+          "termsOfUseUrl": "na",
+          "privacyPolicyUrl": "na"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

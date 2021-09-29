@@ -1,0 +1,142 @@
+{
+    "type": "APL",
+    "version": "1.7",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.4.0"
+        },
+        {
+            "name": "ninja-button",
+            "version": "1.0.0",
+            "source": "https://packages.apl.ninja/button/1.0.0/document.json"
+        }
+    ],
+    "extensions": [
+        {
+            "name": "Back",
+            "uri": "aplext:backstack:10"
+        }
+    ],
+    "settings": {
+        "Back": {
+            "backstackId": "vidSelect"
+        }
+    },
+    "onMount": {
+        "type": "Backstack:Clear",
+        "description": "Clear the backstack when this document loads"
+    },
+    "styles": {
+    "CustomButtonFrame": {
+      "extend": "ButtonFrame",
+      "values": [
+        {
+          "backgroundColor": "red"
+        },
+        {
+          "when": "${state.focused || state.hover || state.pressed}",
+          "backgroundColor": "#fc031c"
+        }
+        
+      ]
+    }
+  },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            
+            {
+                "type": "Container",
+                "height": "100vh",
+
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${payload.gridListData.backgroundImage.sources[0].url}"
+                    },
+                    
+                    {
+                        "item": {
+                            "type": "AlexaImage",
+                            "imageSource": "${payload.gridListData.logoUrl}",
+                            "alignSelf": "center",
+                            "height": "10vh",
+                            "paddingTop": "3vh"
+                        },
+                        "alignSelf": "center",
+                        "type": "Container"
+                    },
+                    {
+                        "type": "Container",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "items": [
+                            {
+                                "type": "Button",
+                                "frameStyle": "CustomButtonFrame",
+                                "paddingTop": "1vh",
+                                "text": "<span fontSize= '20dp'><i><b>Use Our Routines</span>",
+                                "onPress": [
+                                  {
+                                    "type": "OpenURL",
+                                    "source": "Link to site"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Button",
+                                "paddingTop": "1vh",
+                                "fontSize": "@fontSizeSmall",
+                                "frameStyle": "CustomButtonFrame",
+                                "text": "<span fontSize= '20dp'><i><b>Check Us Out Online</span>",
+                                "onPress": [
+                                  {
+                                    "type": "OpenURL",
+                                    "source": "Link to Site"
+                                  }
+                                ]
+                              }
+                            ]
+                        
+                    },
+                    
+                    {
+                        "type": "Container",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "paddingTop":"-5vh",
+                        "paddingBottom":"30vh",
+                        "height":"100vh",
+                        "items": [
+                            {
+                                "type": "AlexaGridList",
+                                "backgroundImageSource": "none",
+                                "listItems": "${payload.gridListData.listItems}",
+                                "imageRoundedCorner": true,
+                                "listId": "vidList",
+                                "primaryAction": {
+                                    "type": "SendEvent",
+                                    "arguments": [
+                                        "vidListItemSelected",
+                                        "${primaryText}"
+                                    ]
+                                },
+                                "imageShadow": true,
+                                "imageScale": "best-fill",
+                                "imageAspectRatio": "poster_landscape",
+                                "hideOrdinal": true
+                            }
+                        ]
+                    }
+                    
+                ]
+            }
+            
+        ]
+    },
+    "layouts": {}
+}

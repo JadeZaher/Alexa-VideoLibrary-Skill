@@ -1,0 +1,164 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "the helper",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayVideoIntent",
+          "slots": [
+            {
+              "name": "videoName",
+              "type": "videoName"
+            }
+          ],
+          "samples": [
+            "the {videoName} video",
+            "{videoName}",
+            "how about {videoName}",
+            "play the {videoName} video",
+            "Can we play {videoName} please",
+            "Let\u0027s see {videoName}",
+            "Show me {videoName}",
+            "Play {videoName}"
+          ]
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": [
+            "ok that\u0027s enough thank you",
+            "stop the video go back",
+            "go back"
+          ]
+        },
+        {
+          "name": "AMAZON.SelectIntent",
+          "samples": []
+        },
+        {
+          "name": "SubscribeIntent",
+          "slots": [],
+          "samples": [
+            "Start the subscription",
+            "Subscribe to this skill",
+            "Subscribe to this service"
+          ]
+        },
+        {
+          "name": "UnsubscribeIntent",
+          "slots": [],
+          "samples": [
+            "Unsubscribe from this service"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Our Latest"
+              }
+            },
+            {
+              "name": {
+                "value": "Video One"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Two"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Three"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Four"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Five"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Six"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Seven"
+              }
+            }
+          ],
+          "name": "videoName"
+        }
+      ]
+    }
+  },
+  "version": "26"
+}
